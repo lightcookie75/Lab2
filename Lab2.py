@@ -20,15 +20,20 @@ def find_min_max(datalist):
         elif min > datalist[i]:
             min = datalist[i]
     int_list = [min, max]
-    print("Minimum and maximum number are ",int_list)
-    return 0
+    print("Minimum and maximum number are",int_list)
+    return int_list
 
-def sort_temperature():
-    print("sort_temperature")
-    return 0
+def sort_temperature(datalist):
+    datalist.sort()
+    print(datalist)
+    return datalist
 
-def calc_median_temperature():
-    print("calc_median_temperature")
+def calc_median_temperature(datalist):
+    i = int(len(datalist)/2)
+    if len(datalist)%2 <= 0:
+        print("Median is",(datalist[i]+datalist[i-1])/2)
+    else:
+        print("Median is",datalist[i])
     return 0
 
 def main():
